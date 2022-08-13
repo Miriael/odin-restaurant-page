@@ -1,5 +1,6 @@
 import { createContact } from "./contact";
 import { createHome } from "./home";
+import { createMenu } from "./menu";
 
 function initPage() {
   const content = document.querySelector('div#content')
@@ -10,7 +11,7 @@ function initPage() {
   button1.setAttribute('class', 'nav__button');
   button1.innerHTML = 'Home';
   button1.addEventListener('click', () => {
-    createHome()
+    createHome();
   })
   navcont.appendChild(button1);
   const button2 = document.createElement('button');
@@ -23,6 +24,9 @@ function initPage() {
   const button3 = document.createElement('button');
   button3.setAttribute('class', 'nav__button');
   button3.innerHTML = 'Menu';
+  button3.addEventListener('click', () => {
+    createMenu();
+  })
   navcont.appendChild(button3);
 }
 
